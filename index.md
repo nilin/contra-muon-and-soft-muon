@@ -1,14 +1,14 @@
 ---
-title: Contra-Muon and Power-Muon
+title: Contra-Muon and Soft-Muon
 ---
 
-# Contra-Muon and Power-Muon
+# Contra-Muon and Soft-Muon
 
 Nilin
 
 2026/5/4
 
-Contra-Muon and Power-Muon are exaggerations of Muon which further boost small
+Contra-Muon and Soft-Muon are exaggerations of Muon which further boost small
 singular values or damp large singular values of the gradient. The goal is to
 compensate for the smaller leverage of small singular directions and boost
 diversity in training.
@@ -24,7 +24,7 @@ definition and an efficient algorithm based on Newton-Schulz iteration.
 
 This note considers the possibility of making Muon even more Muon-like: damping
 the top singular modes or growing the small ones. Contra-Muon mainly addresses
-the relative contributions among the top singular modes, whereas Power-Muon with
+the relative contributions among the top singular modes, whereas Soft-Muon with
 `p < 0` boosts the many tiny singular modes.
 
 ![Linear-scale singular-value maps](figures/power_muon_maps.png)
@@ -41,7 +41,7 @@ update = (1 + contra_muon_coeff) * muon_update - contra_muon_coeff * operator_no
 
 where `0 < contra_muon_coeff <= 1`.
 
-## Power-Muon
+## Soft-Muon
 
 The Newton-Schulz iterates in Muon produce approximations to `f(g)`, where `g`
 is the matrix-shaped gradient and `f(g)` is shorthand for `U f(D) V` when
@@ -53,12 +53,12 @@ Contra-Muon can be considered a special case where we use the 0th and last
 iterate. More generally, we are interested in power functions `x^p` where
 `-1 <= p < 1`. Standard Muon corresponds to `p = 0`.
 
-The Power-Muon fits are built by summing Newton-Schulz iterates. The next plots
+The Soft-Muon fits are built by summing Newton-Schulz iterates. The next plots
 show the cumulative linear combination for `p=-0.2` and `p=0.2`, starting from
 the highest-order iterate and adding lower-order iterates until the final
 approximation is reached.
 
-![Cumulative Power-Muon fits on a linear x-axis](figures/power_muon_cumulative_fits_linear.png)
+![Cumulative Soft-Muon fits on a linear x-axis](figures/power_muon_cumulative_fits_linear.png)
 
 ## Reasoning for Boosting Small Singular Values Beyond Muon
 
@@ -80,7 +80,7 @@ first-order loss change. In momentum SGD, larger singular directions therefore
 contribute quadratically more to the loss change. In Muon, larger singular
 directions still contribute more, but only linearly.
 
-![Muon, Contra-Muon, and Power-Muon singular-value maps](figures/power_muon_readme_figure.png)
+![Muon, Contra-Muon, and Soft-Muon singular-value maps](figures/power_muon_readme_figure.png)
 
 Contra-Muon with coefficient `1` makes the largest singular directions
 contribute approximately the same amount to the loss change, to first order. If
