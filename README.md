@@ -3,7 +3,7 @@
 Nilin
 
 
-Contra-Muon and Soft-Muon (p<0) are exaggerations of Muon which further boost small singular values or apply damping to large singular values of the gradient. The goal is to compensate for the smaller leverage of small singular directions to boost diversity in training. 
+Contra-Muon and Soft-Muon (`p=0.1`) are exaggerations of Muon which further boost small singular values or apply damping to large singular values of the gradient. The goal is to compensate for the smaller leverage of small singular directions to boost diversity in training. 
 
 
 ## Background
@@ -14,9 +14,9 @@ Contra-Muon and Soft-Muon (p<0) are exaggerations of Muon which further boost sm
 ## Boosting the small modes further
 
 
-This note considers the possibility of making Muon even more Muon-like, damping the top singular modes or growing the small ones. Contra-Muon mainly addresses the relative constributions among the top singular modes. whereas power-Muon with p<0 boosts the many tiny singular modes.
+This note considers the possibility of making Muon even more Muon-like, damping the top singular modes or growing the small ones. Contra-Muon mainly addresses the relative constributions among the top singular modes. whereas Soft-Muon with `p=0.1` softly damps smaller singular modes relative to standard Muon.
 
-![Linear-scale singular-value maps](figures/power_muon_maps.png)
+![Linear-scale singular-value maps](figures/soft_muon_contra125_maps.png)
 
 
 

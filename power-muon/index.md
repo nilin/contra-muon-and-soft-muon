@@ -23,9 +23,9 @@ definition and an efficient algorithm based on Newton-Schulz iteration.
 This note considers the possibility of making Muon even more Muon-like: damping
 the top singular modes or growing the small ones. Contra-Muon mainly addresses
 the relative contributions among the top singular modes, whereas Soft-Muon with
-`p < 0` boosts the many tiny singular modes.
+`p = 0.1` softly damps smaller singular modes relative to standard Muon.
 
-![Linear-scale singular-value maps](../figures/power_muon_maps.png)
+![Linear-scale singular-value maps](../figures/soft_muon_contra125_maps.png)
 
 ## Contra-Muon
 
