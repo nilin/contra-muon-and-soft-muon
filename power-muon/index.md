@@ -6,8 +6,6 @@ title: Contra-Muon and Soft-Muon
 
 Nilin
 
-2026/5/4
-
 Contra-Muon and Soft-Muon are exaggerations of Muon which further boost small
 singular values or damp large singular values of the gradient. The goal is to
 compensate for the smaller leverage of small singular directions and boost
