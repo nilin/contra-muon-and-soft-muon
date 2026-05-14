@@ -3,8 +3,7 @@
 Nilin
 
 
-Contra-Muon is an exaggeration of Muon which further boost small singular values or apply damping to large singular values of the gradient. The goal is to compensate for the smaller leverage of small singular directions to boost diversity in training. Soft-Muon stacks Muon's Newton-Schultz iterates to instead underweigh the small singular values compared to Muon, a middle ground between SGD and Muon. Soft-Muon can be used as an approximation to [HTMuon](https://arxiv.org/pdf/2603.10067).
-
+Contra-Muon is an exaggeration of Muon which further boost small singular values or apply damping to large singular values of the gradient. The goal is to compensate for the smaller leverage of small singular directions to boost diversity in training. Soft-Muon stacks Muon's Newton-Schultz iterates to instead underweigh the small singular values compared to Muon, a middle ground between SGD and Muon.
 
 ## Background
 
