@@ -11,9 +11,9 @@ Contra-Muon and Soft-Muon (`p=0.1`) are exaggerations of Muon which further boos
 [Muon](https://kellerjordan.github.io/posts/muon/) modifies the momentum gradient of matrix-shaped weights by making all singular values close to 1, thereby boosting the small singular modes. Muon is not only a definition in terms of linear algebra, but also an algorithm which calculcates the update efficiently using Newton-Schultz iteration.
 
 
-## Boosting the ~~small~~ intermediate [^1] modes further
+## Boosting the ~~small~~ intermediate modes further
 
-This note considers the possibility of making Muon even more Muon-like, damping the top singular modes or growing the ~~small~~ intermediate ones. Contra-Muon mainly addresses the relative constributions among the top singular modes. whereas Soft-Muon with `p=0.1` softly damps smaller singular modes relative to standard Muon.
+This note considers the possibility of making Muon even more Muon-like, damping the top singular modes or growing the ~~small~~ intermediate [^1] ones. Contra-Muon mainly addresses the relative constributions among the top singular modes. whereas Soft-Muon with `p=0.1` softly damps smaller singular modes relative to standard Muon.
 
 ![Log-x singular-value maps](figures/soft_muon_contra125_maps_logx.png)
 
