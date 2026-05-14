@@ -86,4 +86,4 @@ value, where `r_i ~= 1`.
 As a proof of concept I used Contra-Muon in modded-nanogpt track 3: https://github.com/KellerJordan/modded-nanogpt/pull/275, producing a record run. We used a soft-muon approximation to HTMuon (=power function) which led to the 3030-step record.
 
 [^1]: fixed wording from small to intermediate based on feedback from You Jiacheng
-[^2]: [HTMuon](https://arxiv.org/abs/2603.10067) means a power function transformation of singular values. Soft-muon can be used to approximate HTMuon. The [HTMuon paper](https://arxiv.org/abs/2603.10067) exhibits an alternative approximation using iterated approximate matrix square roots.
+[^2]: [HTMuon](https://arxiv.org/abs/2603.10067) means a power function transformation 0<p<1 of singular values. Soft-muon can be used to approximate HTMuon. The [HTMuon paper](https://arxiv.org/abs/2603.10067) exhibits an alternative approximation using iterated approximate matrix square roots.
