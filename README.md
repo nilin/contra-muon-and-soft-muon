@@ -89,4 +89,4 @@ value, where `r_i ~= 1`.
 ## Results
 As a proof of concept I used Contra-Muon in modded-nanogpt track 3: https://github.com/KellerJordan/modded-nanogpt/pull/275, producing a record run.
 
-[^1] fixed wording from small to intermediate based on feedback from You Jiacheng
+[^1]: fixed wording from small to intermediate based on feedback from You Jiacheng
