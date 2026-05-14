@@ -82,7 +82,7 @@ Since `f'(1) = 0`, this contribution is approximately flat near the top singular
 value, where `r_i ~= 1`.
 
 ## Results
-As a proof of concept I used Contra-Muon in modded-nanogpt track 3: https://github.com/KellerJordan/modded-nanogpt/pull/275, producing a record run. We used a soft-muon approximation to HTMuon which led to the 3030-step record.
+As a proof of concept I used Contra-Muon in modded-nanogpt track 3: https://github.com/KellerJordan/modded-nanogpt/pull/275, producing a record run. I later used a contra-muon to soft-muon schedule to get to the 3030-step record.
 
 [^1]: fixed wording from small to intermediate based on feedback from You Jiacheng
 [^2]: [HTMuon](https://arxiv.org/abs/2603.10067) means a power function transformation 0<p<1 of singular values. Soft-muon can be used to approximate HTMuon. The [HTMuon paper](https://arxiv.org/abs/2603.10067) exhibits an alternative approximation using iterated approximate matrix square roots.
