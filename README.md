@@ -33,13 +33,9 @@ where `0 < contra_muon_coeff <= 1`.
 
 ## Soft-Muon
 
-The Newton-Schultz iterates in Muon produce approximations to `f(g)` where `g` is the matrix-shaped gradient, `f(g)` is shorthand for `Uf(D)V` where `UDV` is the SVD of `g`. Here `f` is a function `f(0)=0`, `f((eps,1])=1` where `eps` gets smaller with each iteration. While Muon normally uses the last iterate as an approximation to UV, we can also take linear combinations of the previous iterates to compute other functions of `g`. Contra-Muon can be considerd a special case where we use the 0'th and last iterate. When we use a linear combination with positive coefficients, typically a convex combination, we will call it **soft-muon**. In particular we are interested in power functions `x^p` where `-1<=p<1`.
+The Newton-Schultz iterates in Muon produce approximations to `f(g)` where `g` is the matrix-shaped gradient, `f(g)` is shorthand for `Uf(D)V` where `UDV` is the SVD of `g`. Here `f` is a function `f(0)=0`, `f((eps,1])=1` where `eps` gets smaller with each iteration. While Muon normally uses the last iterate as an approximation to UV, we can also take linear combinations of the previous iterates to compute other functions of `g`. Contra-Muon can be considerd a special case where we use the 0'th and last iterate. 
 
-
-The Soft-Muon fits are built by summing Newton-Schulz iterates. The next plots
-show the cumulative linear combination for `p=-0.2` and `p=0.2`, starting from
-the highest-order iterate and adding lower-order iterates until the final
-approximation is reached.
+When we take a convex combination on NS iterates we will call it **Soft-Muon**. The plots below show cumulative linear combinations used to approximate functions, starting from the highest-order iterate. On the right is an example of soft-muon used to approximate power function of the singular values. Power function transformations of the singular values with p<1 are called [HTMuon](https://arxiv.org/abs/2603.10067)[^2].
 
 
 ![Cumulative Soft-Muon fits on a linear x-axis](figures/power_muon_cumulative_fits_linear.png)
@@ -87,6 +83,7 @@ Since `f'(1) = 0`, this contribution is approximately flat near the top singular
 value, where `r_i ~= 1`.
 
 ## Results
-As a proof of concept I used Contra-Muon in modded-nanogpt track 3: https://github.com/KellerJordan/modded-nanogpt/pull/275, producing a record run.
+As a proof of concept I used Contra-Muon in modded-nanogpt track 3: https://github.com/KellerJordan/modded-nanogpt/pull/275, producing a record run. We used a soft-muon approximation to HTMuon (=power function) which led to the 3030-step record.
 
 [^1]: fixed wording from small to intermediate based on feedback from You Jiacheng
+[^2]: [HTMuon](https://arxiv.org/abs/2603.10067) means a power function transformation of singular values. Soft-muon can be used to approximate HTMuon. The [HTMuon paper](https://arxiv.org/abs/2603.10067) exhibits an alternative approximation using iterated approximate matrix square roots.
