@@ -33,7 +33,7 @@ where `0 < contra_muon_coeff <= 1`.
 
 ## Soft-Muon
 
-The Newton-Schultz iterates in Muon produce approximations to `f(g)` where `g` is the matrix-shaped gradient, `f(g)` is shorthand for `Uf(D)V` where `UDV` is the SVD of `g`. Here `f` is a function `f(0)=0`, `f((eps,1])=1` where `eps` gets smaller with each iteration. While Muon normally uses the last iterate as an approximation to UV, we can also take linear combinations of the previous iterates to compute other functions of `g`. Contra-Muon can be considerd a special case where we use the 0'th and last iterate. When we use a linear combination with positive coefficients, typically a convex combination, we will call it ***soft-muon**. In particular we are interested in power functions `x^p` where `-1<=p<1`.
+The Newton-Schultz iterates in Muon produce approximations to `f(g)` where `g` is the matrix-shaped gradient, `f(g)` is shorthand for `Uf(D)V` where `UDV` is the SVD of `g`. Here `f` is a function `f(0)=0`, `f((eps,1])=1` where `eps` gets smaller with each iteration. While Muon normally uses the last iterate as an approximation to UV, we can also take linear combinations of the previous iterates to compute other functions of `g`. Contra-Muon can be considerd a special case where we use the 0'th and last iterate. When we use a linear combination with positive coefficients, typically a convex combination, we will call it **soft-muon**. In particular we are interested in power functions `x^p` where `-1<=p<1`.
 
 
 The Soft-Muon fits are built by summing Newton-Schulz iterates. The next plots
